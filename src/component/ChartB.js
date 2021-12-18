@@ -5,12 +5,12 @@ const ChartB = (props) => {
 
     const {
         data,
-        outerRadius,
-        innerRadius,
+        outerRadius, //if outerRadius == 0 means pie chart, > 0 become donut chart
+        innerRadius, //calculate width and height
       } = props;
 
     const margin = {
-    top: 50, right: 50, bottom: 50, left: 50,
+    top: 400, right: 500, bottom: 100, left: 500,
     };
 
     const width = 2 * outerRadius + margin.left + margin.right;
@@ -18,7 +18,7 @@ const ChartB = (props) => {
 
     const colorScale = d3     
         .scaleSequential()      
-        .interpolator(d3.interpolateCool)      
+        .interpolator(d3.interpolateWarm)      
         .domain([0, data.length]);
 
     useEffect(() => {
@@ -41,7 +41,7 @@ const ChartB = (props) => {
             .attr('width', width)
             .attr('height', height)
             .append('g')
-            .attr('transform', `translate(${width / 2}, ${height / 2}`)
+            .attr('transform', `translate(${width / 2}, ${height / 2})`)
 
         const arcGenerator = d3
             .arc()
@@ -79,10 +79,10 @@ const ChartB = (props) => {
 
 
     return (
-         <div id="pie-container" />
-    //  <div>
-    //      <h1>bbbbbb</h1>
-    //  </div>
+         <div>
+            <h1 className='mt-5 font-mono text-2xl'>Pie chart</h1>
+            <div id="pie-container" />
+        </div>
     ) 
  }
  

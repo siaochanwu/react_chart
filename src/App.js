@@ -7,9 +7,9 @@ import ChartB from "./component/ChartB"
 
 function App() {
 
-  const data = [{ label: 'Apples', value: 10 }, { label: 'Oranges', value: 20 }];
+  const data = [{ label: 'Apples', value: 10 }, { label: 'Oranges', value: 20 }, { label: 'papaya', value: 40 }, { label: 'Lemon', value: 35}];
   const outerRadius = 0
-  const innerRadius = 100
+  const innerRadius = 200
 
   return (
     <div className="App">
