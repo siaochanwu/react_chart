@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Nav from './component/Nav'
 import ChartA from './component/ChartA'
 import ChartB from "./component/ChartB"
+import ChartC from './component/ChartC'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Routes className="md:flex">
           <Route exact path="/" element={<ChartA />} />
           <Route path="/chartb" element={<ChartB data={data} outerRadius={outerRadius} innerRadius={innerRadius} />} />
+          <Route path="/chartc" element={<ChartC />} />
         </Routes>
       </Router>
     </div>

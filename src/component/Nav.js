@@ -9,6 +9,7 @@ const Nav = () => {
                 <ul className="flex m-2">
                     <li className="px-3"><Link to="/">ChartA</Link></li>
                     <li className="px-3"><Link to="/chartb">ChartB</Link></li>
+                    <li className="px-3"><Link to="/chartc">ChartC</Link></li>
                 </ul>
             </nav>
         </div>
